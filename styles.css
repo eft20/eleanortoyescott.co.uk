@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e8c7; /* Soft sunset-inspired background */
+}
+
+header {
+    background-color: #a67b5b; /* Warm brown from sunset */
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero p {
+    text-align: center; /* Added to center the welcome text */
+    margin: 10px 0; /* Optional: Adds some spacing above and below the text */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #a67b5b;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+.video-squares {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.video-square {
+    width: 480px; /* Adjusted for YouTube 16:9 aspect ratio */
+    height: 270px; /* Adjusted for YouTube 16:9 aspect ratio */
+    background-color: #fff;
+    border: 2px solid #d9a66b; /* Goldish border inspired by sunflower */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-square:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.video-square iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-square img {
+    max-width: 100%;
+    max-height: 200px; /* Limit image height to fit within square */
+    object-fit: contain;
+}
+
+.video-square p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #a67b5b;
+}
+
+.video-square a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.video-square a:hover p {
+    text-decoration: underline;
+}
