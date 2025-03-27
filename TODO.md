@@ -1,0 +1,5 @@
+- Change the colours. Cream background to light grey. Brown banner to navy blue.
+- Add a series of boxes with rounded corners which enlarge on hover
+- Add example boxes with placeholders for photos and links and blog previews
+- Move existing images into boxes
+- Add a box with links to my Computer Lab page, my LinkedIn page, 4C website, 4C on LinkedIn, Canopy PACT website and Canopy PACT on LinkedIn. 
