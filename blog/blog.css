@@ -1,0 +1,418 @@
+/* ==========================================================================
+   Blog section — multi-topic personal blog
+   Neutral navy chrome so it doesn't favour any single topic; each topic
+   gets its own colour via a category pill (.cat-work, .cat-music, etc.)
+   ========================================================================== */
+
+:root {
+    --primary: #1a365d;      /* navy, matches main site */
+    --primary-dark: #10233f;
+    --accent: #2c5282;
+    --bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --text: #1d1d1d;
+    --text-muted: #555;
+    --border: #d9e1ec;
+
+    /* Per-topic category colours */
+    --cat-work: #16a34a;       /* carbon credits / work — green */
+    --cat-music: #9333ea;      /* music — purple */
+    --cat-council: #008066;    /* council — Green Party green */
+    --cat-university: #1a365d; /* university — navy */
+    --cat-stories: #d97706;      /* stories / family anecdotes — amber */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ---- Header ---- */
+.site-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.site-header .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.2em 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-header .brand-text {
+    line-height: 1.2;
+}
+
+.site-header .brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: block;
+}
+
+.site-header .brand-sub {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    transition: background-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ---- Layout ---- */
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page-intro {
+    background: var(--card-bg);
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.page-intro h1 {
+    color: var(--primary);
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+}
+
+.page-intro p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+/* ---- Category filter chips ---- */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.category-filter button {
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.category-filter button:hover,
+.category-filter button.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* ---- Category pills (on cards / posts) ---- */
+.cat {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.cat-work { background: var(--cat-work); }
+.cat-music { background: var(--cat-music); }
+.cat-council { background: var(--cat-council); }
+.cat-university { background: var(--cat-university); }
+.cat-stories { background: var(--cat-stories); }
+
+/* ---- Post list ---- */
+.post-list {
+    display: grid;
+    gap: 24px;
+}
+
+.post-card {
+    display: flex;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card .card-image {
+    flex: 0 0 160px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.6rem;
+}
+
+.post-card .card-body {
+    padding: 18px 22px;
+    flex: 1;
+}
+
+.icon-plus {
+    font-size: 0.6em;
+    opacity: 0.8;
+    padding: 0 0.25em;
+}
+
+.post-card .card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.post-card .post-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.post-card h2 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+.post-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.post-card:hover h2 {
+    color: var(--primary);
+}
+
+/* ---- Single post ---- */
+.post-article {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 36px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.post-article .post-header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+}
+
+.post-article .post-emoji {
+    display: block;
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 0 0 14px;
+}
+
+.post-article h1 {
+    color: var(--primary);
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.post-article .post-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-article p {
+    margin: 0 0 16px;
+}
+
+.post-article h2 {
+    color: var(--primary-dark);
+    margin-top: 28px;
+}
+
+.post-article blockquote {
+    border-left: 4px solid var(--accent);
+    margin: 18px 0;
+    padding: 8px 18px;
+    background: #eef2f9;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-muted);
+}
+
+.post-article a {
+    color: var(--accent);
+}
+
+/* ---- Typewritten memo (1960s office paper) ---- */
+.post-article .memo {
+    font-family: "Courier Prime", "Courier New", Courier, monospace;
+    background: #f4eedd;
+    color: #2a2a2a;
+    padding: 26px 32px;
+    margin: 24px 0;
+    border: 1px solid #ddd0ad;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .post-article .memo {
+        padding: 18px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ---- Lead photo (floats right, text wraps around) ---- */
+.post-article .lead-photo {
+    float: right;
+    width: 260px;
+    max-width: 55%;
+    margin: 4px 0 16px 24px;
+}
+
+.post-article .lead-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.post-article .lead-photo figcaption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .post-article .lead-photo {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 16px;
+    }
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+    background: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 1.4em 20px;
+    margin-top: 40px;
+    font-size: 0.88rem;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+/* ---- RSS badge in header ---- */
+.feed-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.feed-badge:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .post-card {
+        flex-direction: column;
+    }
+    .post-card .card-image {
+        flex: 0 0 70px;
+        font-size: 1.8rem;
+    }
+    .post-article {
+        padding: 22px;
+    }
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
