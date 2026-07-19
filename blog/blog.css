@@ -412,8 +412,4 @@ body {
     .post-article {
         padding: 22px;
     }
-    .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
