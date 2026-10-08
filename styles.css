@@ -3,3 +3,7 @@
 .gallery figure{margin:0;min-width:0}.gallery figcaption{font-size:14px;line-height:1.55;color:var(--muted);padding:12px 0 20px}
 
 .home-intro{max-width:none;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:48px;align-items:center}.home-intro .intro-copy{grid-column:1;grid-row:1}.home-intro h1{font-size:clamp(40px,5vw,62px)}.portrait{grid-column:2;grid-row:1;width:100%;height:auto;border-radius:5px}@media(max-width:760px){.home-intro{grid-template-columns:1fr;gap:28px}.home-intro .portrait{grid-column:1;grid-row:1;max-width:280px}.home-intro .intro-copy{grid-column:1;grid-row:2}}
+
+.post-illustration{margin:32px 0}.post-illustration img{width:100%;height:auto}.post-illustration figcaption{font-size:14px;line-height:1.55;color:var(--muted);margin-top:12px}
+
+.book-thumbnail{margin:24px 0 32px;max-width:220px}.book-thumbnail img{width:100%;height:auto;border-radius:3px}.book-thumbnail figcaption{font-size:14px;line-height:1.5;color:var(--muted);margin-top:10px}
