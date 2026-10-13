@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Eleanor Toye Scott — Writing</title>
+    <link>https://eleanortoyescott.co.uk/blog/</link>
+    <description>Personal essays and writing about climate, education and public life.</description>
+    <language>en-gb</language>
+    <atom:link href="https://eleanortoyescott.co.uk/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>So the river has rights - so what?</title>
+      <link>https://eleanortoyescott.co.uk/blog/posts/river-rights.html</link>
+      <description>Recognising the rights of the River Cam is encouraging. Protecting them in practice means confronting water scarcity and the pressures of development.</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://eleanortoyescott.co.uk/blog/posts/river-rights.html</guid>
+    </item>
+    <item>
+      <title>My Father and the Chancellor’s Toilet</title>
+      <link>https://eleanortoyescott.co.uk/blog/posts/my-father-and-the-chancellors-toilet.html</link>
+      <description>How an impossible request from a Treasury martinet sparked a legendary memo — and an early exit from the Civil Service.</description>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://eleanortoyescott.co.uk/blog/posts/my-father-and-the-chancellors-toilet.html</guid>
+    </item>
+  </channel>
+</rss>
